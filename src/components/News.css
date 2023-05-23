@@ -1,0 +1,36 @@
+.news-container {
+    display: grid;
+    grid-gap: 20px;
+  }
+  
+  .news-item {
+    border: 1px solid rgb(34, 32, 32);
+    padding: 10px;
+    border-radius: 4px;
+    width: 50%;
+    margin-left: 25%;
+  }
+  
+  .news-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .news-description {
+    margin-top: 10px;
+  }
+  
+  .read-more {
+    display: inline-block;
+    background-color: #6f9ccc;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  .read-more:hover {
+    background-color: #0056b3;
+  }
+  

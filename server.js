@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const { MongoClient } = require('mongodb');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const axios = require('axios');
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost/formDB', { useNewUrlParser: true, useUnifiedTopology: true })
@@ -59,14 +60,14 @@ app.get('/api/data', async (req, res) => {
 });
 
 const port = process.env.PORT || 5000;
-
+const apiKey = 'd930c9c94aa6418c96a1185e3fbfc464';
 app.get('/api/news', async (req, res) => {
   try {
     const response = await axios.get(
       'https://newsapi.org/v2/everything', {
         params: {
           q: 'NGO',
-          apiKey: process.env.NEWS_API_KEY,
+          apiKey: apiKey,
           language: 'en',
           qInTitle: 'NGO'
         }

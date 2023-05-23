@@ -164,16 +164,22 @@ const FilterSearch = () => {
       </div>
       <div>
         {filteredProducts.map((product) => (
-          <div className="card" key={product.id}>
+          <div className="card" s key={product.id}>
+          <div className="card-body">
+            <h5 className="card-title"></h5>
             <h3>{product.name}</h3>
             <p>Impact Area: {product.impactArea}</p>
             <p>Location: {product.location}</p>
             <p>Category: {product.category}</p>
+            <br></br>
+            <a href="#" className="button">Go somewhere</a>
           </div>
+        </div>
         ))}
       </div>
+      </div>
     </div>
-    </div>
+   
   );
 };
 
