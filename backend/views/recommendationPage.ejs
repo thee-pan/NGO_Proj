@@ -1,0 +1,43 @@
+<%-include ('partials/header')%>
+
+<div class="recommendations" style="overflow-x: hidden;">
+    <div class="prev container" style="padding-top: 5%;">
+        <div class="text" style="border: 1px solid blue; border-radius: 2%;">
+            <h1 style="font-family: Monserrat; text-align: center;">Last NGO you viewed: </h1>
+            <h2 style="font-family: Monserrat; text-align: center;"><a class="product-a" href="/product/<%=product_id%>">
+                    <%=product_name%>
+                </a></h2>
+        </div>
+        
+    </div>
+    
+    <div class="recommend-ngo container" style="padding-top: 5%;">
+            <h2 style="font-family: Monserrat;">More Like This: </h2>
+            
+        <div class="row" style="font-family: Monserrat;">
+            <% items.forEach(element=> { %>
+                    <div class="col-sm-4 card" style="width: 18rem;padding: 2%; margin-left: 5%; margin-bottom: 2%;">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <%= element.name %>
+                            </h4>
+                            <p class="card-text">
+                                <%= element.purpose %>
+                            </p>
+                            <a href="/product/<%=element._id%>" class="btn btn-dark">See More</a>
+                        </div>
+                    </div>
+                    <% }); %>
+                </div>
+               
+        </div>
+    </div>
+    
+</div>
+
+
+       
+
+
+
+<%-include ('partials/footer')%>

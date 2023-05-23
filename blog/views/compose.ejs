@@ -1,0 +1,22 @@
+
+<%-include("partials/header"); -%>
+    <form class="writeForm" method="post" action="/compose">
+      <div class="writeFormGroup">
+        <label htmlFor="fileInput">
+          <i class="writeIcon fas fa-plus"><input type="file" id="fileInput" style="display:none;" /></i>
+
+        </label>
+        
+        <input type="text" placeholder="Title" class="writeInput" autoFocus={true}
+          
+        />
+      </div>
+      <div class="writeFormGroup">
+        <textarea placeholder="Tell your story..." type="text" class="writeInput writeText" ></textarea>
+      </div>
+      <button class="writeSubmit" type="submit">
+        Publish
+      </button>
+      </form>
+
+<%-include("partials/footer"); -%>
